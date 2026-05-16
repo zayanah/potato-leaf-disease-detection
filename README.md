@@ -13,6 +13,8 @@ Deep Learning CNN model
 Flask web application
 Image upload and prediction
 Simple and responsive UI
+
+
 🛠️ Technologies Used
 Python
 Flask
@@ -20,6 +22,8 @@ TensorFlow / Keras
 HTML, CSS
 OpenCV
 NumPy
+
+
 📂 Project Structure
 Potato_Leaf_Disease/
 │
@@ -32,6 +36,8 @@ Potato_Leaf_Disease/
 ├── templates/
 ├── dataset/
 └── model/
+
+
 📊 Dataset
 
 Dataset used from Kaggle PlantVillage:
@@ -43,6 +49,8 @@ Classes used:
 Potato___Early_blight
 Potato___Late_blight
 Potato___healthy
+
+
 🚀 How To Run
 1️⃣ Clone Repository
 git clone https://github.com/your-username/Potato_Leaf_Disease.git
@@ -60,6 +68,8 @@ python train_model.py
 The trained model will be saved as:
 
 potatoes.h5
+
+
 📸 Project Screenshots
 Home Page
 ![Home Page](screenshots/home.png)
