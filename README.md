@@ -1,27 +1,35 @@
-# potato-leaf-disease-detection
-ML based potato leaf disease detection project
-Potato Leaf Disease Detection 🌿🥔
+🌿 Potato Leaf Disease Detection 🥔
 
 A Deep Learning based web application that detects potato leaf diseases using CNN and TensorFlow/Keras.
 
-📌 Features
-Detects:
-Potato Early Blight
-Potato Late Blight
-Healthy Potato Leaves
-Deep Learning CNN model
-Flask web application
-Image upload and prediction
-Simple and responsive UI
+📌 About The Project
 
+This project uses a Convolutional Neural Network (CNN) model to identify diseases in potato leaves from uploaded images.
+The application helps farmers and researchers detect plant diseases quickly and accurately through an easy-to-use web interface.
+
+✨ Features
+
+✅ Detects Potato Leaf Diseases
+✅ Identifies:
+
+Early Blight
+Late Blight
+Healthy Leaves
+
+✅ Deep Learning CNN Model
+✅ Flask Web Application
+✅ Upload Leaf Images for Prediction
+✅ Simple & Responsive UI
+✅ Fast and Accurate Predictions
 
 🛠️ Technologies Used
-Python
-Flask
-TensorFlow / Keras
-HTML, CSS
-OpenCV
-NumPy
+Technology	Purpose
+Python	Backend Programming
+Flask	Web Framework
+TensorFlow / Keras	Deep Learning Model
+OpenCV	Image Processing
+NumPy	Numerical Operations
+HTML & CSS	Frontend Design
 
 
 📂 Project Structure
@@ -32,34 +40,34 @@ Potato_Leaf_Disease/
 ├── potatoes.h5
 ├── requirements.txt
 │
-├── static/
-├── templates/
 ├── dataset/
-└── model/
-
-
+├── model/
+├── static/
+└── templates/
 📊 Dataset
 
-Dataset used from Kaggle PlantVillage:
+Dataset used from Kaggle PlantVillage Dataset:
 
-PlantVillage Dataset on Kaggle
+PlantVillage Dataset
 
-Classes used:
-
+Classes Used
 Potato___Early_blight
 Potato___Late_blight
 Potato___healthy
 
 
-🚀 How To Run
+🚀 Installation & Setup
 1️⃣ Clone Repository
-git clone https://github.com/your-username/Potato_Leaf_Disease.git
-cd Potato_Leaf_Disease
-2️⃣ Install Requirements
+git clone https://github.com/your-username/potato-leaf-disease-detection.git
+2️⃣ Navigate To Project Folder
+cd potato-leaf-disease-detection
+3️⃣ Install Dependencies
 pip install -r requirements.txt
-3️⃣ Run Application
+4️⃣ Run The Application
 python app.py
-🧠 Train Model
+
+
+🧠 Train The Model
 
 To train the CNN model:
 
@@ -68,14 +76,8 @@ python train_model.py
 The trained model will be saved as:
 
 potatoes.h5
-
-
 📸 Project Screenshots
-Home Page
+🏠 Home Page
 ![Home Page](screenshots/home.png)
-Prediction Result
-![Prediction](screenshots/result.png)
-
-👩‍💻 Author
-
-Zayanah Khan
+🔍 Disease Prediction
+![Prediction Result](screenshots/result.png)
