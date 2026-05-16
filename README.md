@@ -1,83 +1,149 @@
-🌿 Potato Leaf Disease Detection 🥔
+# 🌿 Potato Leaf Disease Detection 🥔
 
-A Deep Learning based web application that detects potato leaf diseases using CNN and TensorFlow/Keras.
+Deep Learning based Potato Leaf Disease Detection System using CNN and TensorFlow/Keras.
 
-📌 About The Project
+---
 
-This project uses a Convolutional Neural Network (CNN) model to identify diseases in potato leaves from uploaded images.
-The application helps farmers and researchers detect plant diseases quickly and accurately through an easy-to-use web interface.
+# 📖 About Project
 
-✨ Features
+This project is a Deep Learning based web application that detects potato leaf diseases using Convolutional Neural Networks (CNN).  
+Users can upload potato leaf images and the system predicts whether the leaf is:
 
-✅ Detects Potato Leaf Diseases
-✅ Identifies:
+- Potato Early Blight
+- Potato Late Blight
+- Healthy Potato Leaf
 
-Early Blight
-Late Blight
-Healthy Leaves
+---
 
-✅ Deep Learning CNN Model
-✅ Flask Web Application
-✅ Upload Leaf Images for Prediction
-✅ Simple & Responsive UI
-✅ Fast and Accurate Predictions
+# 📂 Project Structure
 
-🛠️ Technologies Used
-Technology	Purpose
-Python	Backend Programming
-Flask	Web Framework
-TensorFlow / Keras	Deep Learning Model
-OpenCV	Image Processing
-NumPy	Numerical Operations
-HTML & CSS	Frontend Design
-
-
-📂 Project Structure
+```bash
 Potato_Leaf_Disease/
+│
+├── dataset/
+│
+├── model/
+│
+├── static/
+│
+├── templates/
 │
 ├── app.py
 ├── train_model.py
 ├── potatoes.h5
 ├── requirements.txt
-│
-├── dataset/
-├── model/
-├── static/
-└── templates/
-📊 Dataset
+└── README.md
+```
 
-Dataset used from Kaggle PlantVillage Dataset:
+---
 
-PlantVillage Dataset
+# 🛠️ Tech Stack
 
-Classes Used
-Potato___Early_blight
-Potato___Late_blight
-Potato___healthy
+| Layer | Technology |
+|--------|-------------|
+| Frontend | HTML, CSS |
+| Backend | Flask (Python) |
+| Deep Learning | TensorFlow / Keras |
+| Image Processing | OpenCV |
+| Numerical Computing | NumPy |
+| Model Type | CNN |
 
+---
 
-🚀 Installation & Setup
-1️⃣ Clone Repository
+# ✨ Features
+
+- ✅ Detects Potato Early Blight
+- ✅ Detects Potato Late Blight
+- ✅ Detects Healthy Potato Leaves
+- ✅ CNN based Deep Learning Model
+- ✅ Upload Image and Predict Disease
+- ✅ Simple and Responsive UI
+
+---
+
+# 📊 Dataset
+
+Dataset used from Kaggle PlantVillage:
+
+https://www.kaggle.com/datasets/emmarex/plantdisease
+
+### Classes Used
+
+- Potato___Early_blight
+- Potato___Late_blight
+- Potato___healthy
+
+---
+
+# 🚀 Installation & Setup
+
+## 1️⃣ Clone Repository
+
+```bash
 git clone https://github.com/your-username/potato-leaf-disease-detection.git
-2️⃣ Navigate To Project Folder
+```
+
+---
+
+## 2️⃣ Navigate to Project Folder
+
+```bash
 cd potato-leaf-disease-detection
-3️⃣ Install Dependencies
+```
+
+---
+
+## 3️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
-4️⃣ Run The Application
+```
+
+---
+
+## 4️⃣ Run Application
+
+```bash
 python app.py
+```
 
+---
 
-🧠 Train The Model
+# 🧠 Train Model
 
 To train the CNN model:
 
+```bash
 python train_model.py
+```
 
 The trained model will be saved as:
 
+```bash
 potatoes.h5
-📸 Project Screenshots
-🏠 Home Page
+```
+
+---
+
+# 📸 Project Screenshots
+
+## 🏠 Home Page
+
+```md
 ![Home Page](screenshots/home.png)
-🔍 Disease Prediction
+```
+
+---
+
+## 🔍 Prediction Result
+
+```md
 ![Prediction Result](screenshots/result.png)
+```
+
+---
+
+
+# 👩‍💻 Author
+
+Zayanah Khan
