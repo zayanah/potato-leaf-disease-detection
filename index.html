@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Potato Leaf Disease Detection</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #43cea2, #185a9d);
+            color: white;
+            text-align: center;
+        }
+
+        .header {
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .container {
+            background: white;
+            color: black;
+            width: 450px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        input[type="file"] {
+            margin: 20px 0;
+        }
+
+        input[type="submit"] {
+            background-color: #185a9d;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #43cea2;
+        }
+
+        img {
+            margin-top: 15px;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .result-box {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f1f8e9;
+            border-radius: 10px;
+        }
+
+        .prediction {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1b5e20;
+        }
+
+        .confidence {
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+
+    <script>
+        function previewImage(event) {
+            const reader = new FileReader();
+            reader.onload = function(){
+                const output = document.getElementById('preview');
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+
+</head>
+<body>
+
+    <div class="header">
+        🌿 Potato Leaf Disease Detection System
+    </div>
+
+    <div class="container">
+
+        <h3>Upload Leaf Image</h3>
+
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" onchange="previewImage(event)" required>
+            <br>
+            <img id="preview"/>
+            <br><br>
+            <input type="submit" value="Predict Disease">
+        </form>
+
+        {% if prediction %}
+        <div class="result-box">
+            <div class="prediction">
+                Prediction: {{ prediction.replace('Potato___','').replace('_',' ') }}
+            </div>
+            <div class="confidence">
+                Confidence: {{ confidence }}%
+            </div>
+
+            <hr>
+
+            {% if "Early_blight" in prediction %}
+                <p><b>About Early Blight:</b><br>
+                A fungal disease causing dark spots with concentric rings. 
+                Control using fungicides and crop rotation.</p>
+            {% elif "Late_blight" in prediction %}
+                <p><b>About Late Blight:</b><br>
+                A serious disease causing water-soaked lesions. 
+                Requires immediate fungicide treatment.</p>
+            {% else %}
+                <p><b>Healthy Leaf:</b><br>
+                The leaf appears healthy. No disease detected.</p>
+            {% endif %}
+        </div>
+        {% endif %}
+
+    </div>
+
+</body>
+</html>
