@@ -136,7 +136,7 @@ potatoes.h5
 ## 🔍 Prediction Result
 
 ![Prediction Result](screenshots/result.png)
-
+![Prediction Result](screenshots/result2.png)
 ---
 
 
