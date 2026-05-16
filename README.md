@@ -129,17 +129,13 @@ potatoes.h5
 
 ## 🏠 Home Page
 
-```md
 ![Home Page](screenshots/home.png)
-```
 
 ---
 
 ## 🔍 Prediction Result
 
-```md
 ![Prediction Result](screenshots/result.png)
-```
 
 ---
 
